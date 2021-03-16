@@ -1,0 +1,26 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="Sofía Celi">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Post-quantum, Cryptography, Workshop">
+
+  <meta property="og:title" content="PQNet Workshop" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.sofiaceli.com/PQNet-Workshop/" />
+
+  <meta name="twitter:site" content="@claucece" />
+  <meta name="twitter:creator" content="@claucece" />
+  <meta property="og:url" content="https://claucece.github.io/" />
+  <meta property="og:title" content="PQNet Workshop" />
+  <meta property="og:description" content="PQNet Workshop" />
+
+  <link rel='shortcut icon' type='image/x-icon' href="{{ site.baseurl }}/images/favicon.ico" />
+  <link rel='shortcut icon' type='image/x-icon' href="{{ site.baseurl }}/images/favicon_32.ico" />
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  {% feed_meta %}
+</head>
