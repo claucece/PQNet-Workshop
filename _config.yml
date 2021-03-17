@@ -22,7 +22,7 @@ title: PQNet workshop
 email: sceli@cloudflare.com
 description: >- # this means to ignore newlines until "baseurl:"
   1st Workshop on Post-Quantum Algorithms and Networks.
-baseurl: "sofiaceli.com" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: claucece
 github_username:  claucece
