@@ -1,0 +1,30 @@
+/**
+ * Basic styling
+ */
+body {
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+  margin: 150px;
+}
+
+#main-title {
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+}
+
+#main-description {
+  font-size: 25px;
+  font-weight: 200;
+  margin: 0;
+}
+
+#main-text {
+  font-size: 25px;
+  font-weight: 200;
+  text-align: right;
+  margin: 0;
+}
