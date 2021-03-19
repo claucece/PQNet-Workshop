@@ -39,9 +39,21 @@
     }
   }
 
+  @media only screen and (max-width: 400px) {
+    body {
+      margin: 20px;
+    }
+  }
+
   .main-box {
     display: flex;
 	}
+
+  @media only screen and (max-width: 600px) {
+    .main-box {
+		  display: block;
+    }
+  }
 
 	.main-description {
     display: block;
@@ -54,6 +66,12 @@
 		padding-left: 200px;
 	  width: 60%;
 	}
+
+  @media only screen and (max-width: 600px) {
+    #main-logo {
+      visibility: hidden;
+    }
+  }
 
   #main-title {
     font-size: 70px;
