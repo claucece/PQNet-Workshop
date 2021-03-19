@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="Sofía Celi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Post-quantum, Cryptography, Workshop">
 
   <meta property="og:title" content="PQNet Workshop" />
@@ -20,6 +20,10 @@
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     font-family: Helvetica;
     font-size: 18px;
@@ -27,6 +31,12 @@
     font-weight: 300;
     color: black;
     margin: 150px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      margin: 50px;
+    }
   }
 
   .main-box {
@@ -37,11 +47,12 @@
     display: block;
 		border: solid 5px #faae41;
 		padding: 10px;
+		width: 100%
 	}
 
 	#main-logo {
 		padding-left: 200px;
-	  width: 40%;
+	  width: 60%;
 	}
 
   #main-title {
