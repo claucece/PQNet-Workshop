@@ -91,6 +91,36 @@
     text-align: right;
     margin: 0;
   }
+
+  .fixed_headers {
+    width: 750px;
+    table-layout: fixed;
+    border-collapse: collapse;
+		margin-left: 120px;
+	}
+
+	.fixed_headers th, .fixed_headers td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px solid #d3d3d3;
+    border-right: 2px solid #d3d3d3;
+  }
+
+  .fixed_headers thead {
+     background-color: #d3d3d3;
+display:table-header-group;
+	}
+
+	 .fixed_headers thead  tr {
+     display: block;
+     position: relative;
+   }
+
+	.fixed_headers tbody {
+     display: block;
+     overflow: auto;
+  }
+
 	</style>
   {% feed_meta %}
 </head>
