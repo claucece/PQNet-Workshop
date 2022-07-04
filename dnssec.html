@@ -1,0 +1,62 @@
+---
+layout: default
+---
+    <div class="main-box">
+  	  <div>
+        <p id="main-title">PQNet: Notes on PQ DNSSEC</p>
+        <p id="main-description">Post-Quantum Networks Workshop (PQNet).</p>
+			<hr>
+      <div>
+        <p>
+				In this section, you will find the notes of the panel held on PQNet2022 around transitioning DNSSEC to post-quantum cryptography. The panel was held with:
+        <ul>
+				  <li>Andrew Fregly from Verisign</li>
+				  <li>Paul Hoffman from ICANN</li>
+					<li>Moritz Müller from SIDN Labs</li>
+					<li>Christian Elmerot from Cloudflare</li>
+					<li>Roland M. van Rijswijk-Deij from University of Twente</li>
+					<li>Sofía Celi from Brave</li>
+				</ul>
+        </p>
+        <br>
+				<p><i>What are the biggest challenges we face for transitioning DNSSEC to post-quantum cryptography?</i></p>
+			  <p>There are two types of challenges:</p>
+				<ul>
+				  <li>Protocol level</li>
+				  <li>Operational</li>
+				</ul>
+				<p>On the protocol level, we don’t know if substituting classical algorithms for post-quantum ones will be 'just enough'. We have a strong intuition (and research) that it is not going to be the case.</p>
+				<p>Isogeny-based cryptography and hash-based cryptography constructions (as seen <a href="https://ftp.fi.muni.cz/pub/internet-drafts/draft-afrvrd-dnsop-stateful-hbs-for-dnssec-00.html" target="_blank">here</a>)  might be the path forward for DNSSEC.</p>
+				<p>On the operational level, there are bigger challenges. We are unsure of what operational problems there will be. We are unsure if, for example, DNS attacks occur in the wild (at what level and with what regularity) and if DNSSEC as it is still makes sense to prevent them. We are also unsure of what specific challenges there are on migrating, maintaining and configuring DNSSEC, and how much DNSSEC is used in practice.</p>
+				<p>The biggest challenge is also to get the ecosystem prepared, as it is a very complex one. The DNS community is different from the TLS one. The latter has a handful of libraries that are used in practice, while DNS (and DNSSEC) is a much more complex system.</p>
+				<p>Prior to thinking on a post-quantum DNSSEC, perhaps we should think on: does DNSSEC still make sense today (and in the future)?</p>
+				<p>An conversation around some of these points can be found <a href="https://www.icann.org/en/system/files/files/octo-031-11feb22-en.pdf" target="_blank">here</a>.</p>
+        <br>
+				<p><i>What properties/opportunities of DNSSEC do we still want to provide?</i></p>
+				<p>Authentication is still an important property (specifically, end-point authentication or as the property of the responses). DNS-based Authentication of Named Entities (DANE) is very important as well.</p>
+				<p>It is very unclear (with data to backup) how much DNSSEC protects against DNS-cache poisoning as we are unclear on how much the attack happens in the wild. We have been trying to create a survey of how much those attacks occur in practice.</p>
+				<br>
+				<p><i>What will be the operational problems facing a migration of DNSSEC to post-quantum on the top of our head?</i></p>
+				<ul>
+				  <li>Migrating root servers will be very difficult and requires being very careful. The same for HSMs.</li>
+					<li>There could be a possibility of adding/increasing denial of service attacks due to the sizes or operational costs of post-quantum cryptography.</li>
+					<li>We should be careful with fragmentation as falling to TCP is not the greatest option.</li>
+					<li>It is unclear if UDP as it is will still work, or we should think of a flavor of DNSEC over QUIC. Perhaps, this might be the future of the protocol and an increase in general of the usage of QUIC.</li>
+				</ul>
+        <p><i>What do we need to make the migration to a new (PQ)DNSSEC work?</i></p>
+				<p>We need proper tests/specs of what works and what doesn’t: this could translate into performing more experiments. We need real data and test beds that run constantly. We need to map out the operational challenges prior to a “real” migration.</p>
+				<p>We need general documents of what post-quantum cryptography will bring as challenges.</p>
+        <br>
+        <p><i>Looking ahead for new workshops/proposals</i></p>
+        <p>Our action items are:</p>
+        <ul>
+				  <li>We need to create a live document of the operational problems, properties and limitations of DNSSEC from the practical perspective.</li>
+					<li>Data on how much is cache poisoning attack (or other attacks) seen in the wild.</li>
+					<li>More tests and real world data of what can work.</li>
+					<li>Good measurements metrics of post-quantum algorithms.</li>
+					<li>Propose a way forward for the IETF: perhaps as part of the BoF?</li>
+        </ul>
+				<hr>
+		</div>
+  </div>
+</div>
