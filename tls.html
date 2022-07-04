@@ -1,0 +1,58 @@
+---
+layout: default
+---
+    <div class="main-box">
+  	  <div>
+        <p id="main-title">PQNet: Notes on PQ TLS</p>
+        <p id="main-description">Post-Quantum Networks Workshop (PQNet).</p>
+			<hr>
+      <div>
+        <p>
+				In this section, you will find the notes of the panel held on PQNet2022 around transitioning TLS to post-quantum cryptography. The panel was held with:
+        <ul>
+				  <li>Adam Langley from Google</li>
+				  <li>Panos Kampanakis from Amazon</li>
+					<li>Benjamin Beurdouche from Mozilla</li>
+					<li>Chris Wood from Cloudflare</li>
+					<li>Devon O'Brien from Google</li>
+					<li>Sofía Celi from Brave</li>
+				</ul>
+        </p>
+				<p>These notes refer mostly to TLS 1.3, as it is the newest version of the protocol.</p>
+        <br>
+				<p><i>What are the biggest challenges we face for transitioning TLS 1.3 to post-quantum cryptography?</i></p>
+			  <p>There are two properties to think about here:</p>
+				<ul>
+				  <li>Confidentiality</li>
+				  <li>Authentication</li>
+				</ul>
+				<p>One of the main concerns with the Post-Quantum transition is to not break the existing security and privacy guarantees provided with the current protocols. To ensure this we want to leverage the research and techniques created, that were used and designed during the TLS 1.3 standardization, to have strong guarantees in case something breaks.</p>
+        <p>On the first property, middleboxes in the path seem to be the most difficult as their software is buggy or out of date. They also seem to be unresponsive when being asked where the actual problem is. <a href="https://www.chromium.org/cecpq2/" target="_blank">Google stopped their experiment</a> with post-quantum cryptography precisely because of this, due to bugs on Fortigate devices. It is unclear if we will be ok with breaking middleboxes. It is also unclear how old software will react to post-quantum cryptograph.</p>
+	      <p>The experiments have mainly focused on using lattice-based cryptography. Isogeny-based cryptography might work as well but it will need more time.</p>
+        <p>Experiments seem to also fail due to slow post-quantum key generation: it seems to fail on mobile builders. CPU costs of operations can still be a factor. The bigger size of some parameters will inevitably cause latency, especially on the 95% tails. Upwards of a 100ms which compounds. The challenges are mostly on the corner-cases: tails or process-intensive operations: this will increase latency and perhaps add extra rountrips.</p>
+        <p>On the second property, little work has been done on the actual migration beyond knowing that it will be hard. The most important part of authentication that we should focus on is certificate-based authentication, as password-based authentication is rarely used for TLS. Certificate-based authentication, though, involves many parties and it is difficult to coordinate with all of them.</p>
+        <p>The migration is not going to be cheap. Perhaps we will have a slower network. We also don’t seem to know how the end user will be impacted: perhaps, a user study of how 'slow is too slow' for users should be put in place (an initial blog post can be found <a href="https://sofiaceli.com/2022/03/12/loading.html" target="_blank">here</a>).</p>
+        <br>
+				<p><i>What are our efforts on the standardization front?</i></p>
+        <p>We are overall waiting for the winners of the NIST post-quantum process. IETF has started some work, specifically for TLS (other working groups do not seem to have a path forward). We have a potential mechanism on how to add post-quantum algorithms to the key exchange phase of TLS, as seen <a href="https://datatracker.ietf.org/doc/html/draft-ietf-tls-hybrid-design" target="_blank">here</a>.</p>
+        <p>On the authentication front, it is still difficult to know what will work. Perhaps, KEM-based authentication will work (as specified <a href="https://datatracker.ietf.org/doc/draft-celi-wiggers-tls-authkem/" target="_blank">here</a>) and this could prompt a rethink of TLS 1.3 (maybe a TLS 1.4?). Authentication by resumption will still work if the first handshake was indeed quantum protected (as seen <a href="https://datatracker.ietf.org/doc/html/rfc8446#section-2.2" target="_blank">here</a>).
+        <p>QUIC uses TLS 1.3, but it will need to take into account amplification protections affecting performance due to post-quantum authentication in QUIC.</p>
+        <p>Other parts of the Internet have started using protocols which have not been standardized by bodies of standardization, such as Signal or Wireguard. There are proposals to make them post-quantum. For those protocols, authors will have to lead the transition to PQ.</p>
+				<br>
+        <p><i>If we need to migrate to a new PKI, what will this new one be?</i></p>
+        <p>It will be nice to get rid of the current encoding, and propose something beyond x509. We should make name constraints work. On the contrary of what happens for key exchange, in certificate-based authentication, we perhaps will not have the possibility of using a 'hybrid/dual' design: there are no proposals on that yet.</p>
+        <p>Migration to a new PKI will be slow, at least a decade. It is unclear how certificate transparency and revocation will work. Instead of having the same way for the PKI to work (or very similar), we should propose new cryptography for it (such as for transparency or revocation). We can also rethink what properties should the PKI provide: instead of looking at substituting algorithms, we can look at the properties and how to make them happen in a post-quantum way.</p>
+        <p>There has been very little experimentation on this front, but the CAB forum is starting to look at PQ authentication (still very early).</p>
+        <br>
+        <p><i>Looking ahead for new workshops/proposals</i></p>
+        <p>Our action items are:</p>
+        <ul>
+          <li>Curate a better survey of the challenges of the post-quantum migration: maybe a <a href="https://github.com/claucece/HACS-2022-Celi/blob/main/migration-PQ/PQ-Migration.pdf" target="_blank">start point</a></li>
+          <li>Create a list of properties for the internet PKI and cryptography that can improve it</li>
+          <li>Find more around what is acceptable for users if connections get delayed: a user study</li>
+          <li>Plan more workshops such as this with emphasis on inviting more people from the PKI land</li>
+        </ul>
+				<hr>
+		</div>
+  </div>
+</div>
