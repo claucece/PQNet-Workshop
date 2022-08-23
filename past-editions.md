@@ -5,8 +5,8 @@ layout: default
   <div>
     <p id="main-title">PQNet</p>
     <p id="main-description">Post-Quantum Networks Workshop.</p>
-    <p id="main-description"><strong>Location</strong>: Special event prior to the <a href="https://rwc.iacr.org/2022/">NIST Fourth PQC Standardization Conference</a>.</p>
-    <p id="main-description"><strong>Date</strong>: November 27 and 28, 2023.</p>
+    <p id="main-description"><strong>Location (part 2)</strong>: Special event at <a href="https://rwc.iacr.org/2022/">Real World Crypto 2022 (RWC)</a>.</p>
+    <p id="main-description"><strong>Date (part 2)</strong>: 19th and 20th of April after RWC2022.</p>
   </div>
   <div id="main-logo">
     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 501.7 373.9" style="enable-background:new 0 0 501.7 373.9;" xml:space="preserve">
@@ -2119,7 +2119,7 @@ layout: default
 <div class="main-description">
   <p>
     The past years have witnessed the advances of post-quantum cryptography (PQC)
-    as part of the on-going NIST process in order to provide protection against
+    as part of the on-going NIST competition in order to provide protection against
     quantum adversaries. But, one of the most challenging aspects that we are
     currently facing is how to integrate these algorithms into the networks,
     protocols and systems that we use today.
@@ -2133,10 +2133,133 @@ layout: default
     these algorithms into real-world networks, as well as of standardizing these
     complex cryptographic protocols.
   </p>
-  <p><strong>Organizers:</strong> Sofía Celi.</p>
+  <p>
+    The Post-Quantum and Networks workshop will ran into two parts:
+  <ul>
+    <li><strong>A satellite event with the <a href="https://isogenyschool2020.co.uk/">Isogeny-based cryptography school</a></strong>:
+      a lenient introduction to the network protocols, the post-quantum and networks protocols proposals, and the challenges of
+      using Isogeny-Based cryptography with them.</li>
+    <li><strong>A bigger event happening as affiliated event to RWC2022</a></strong>:
+      The first edition of the workshop focuses on current efforts to integrate post-quantum cryptography
+      into protocols by looking at what is proposed for a post-quantum TLS 1.3,
+      DNSSEC or VPNs. It also aims to start the conversation around what challenges
+      are there when putting post-quantum algorithms into secure messaging or TLS
+      1.3, by holding panels with experts from different areas.
+    </li>
+  </ul>
+  </p>
+  <p><strong>Organizers:</strong> Sofía Celi & Nick Sullivan.</p>
 </div>
 <br><br>
 <div>
+
+  <hr>
+  <div class="faq-question">
+    <input id="toggle_1" type="checkbox" checked></input>
+    <label for="toggle_1">
+      <p id="main-description">(Archived) Part 1: Satellite event with the Isogeny-based cryptography school.</p>
+    </label>
+    <div id="expand_1">
+      <p>The event will be entirely virtual.</p>
+      <p>This isn’t a place for people to be exclusionary. We’ll use the <a href="https://snapl.org/2015/policy.html">SNAPL Friendly Environment Policy</a>, and follow all the guidelines and policies of the Isogeny-based cryptography school.</p>
+      <p>The schedule will follow this format (all times are displayed in UTC):</p>
+      <table class="fixed_headers">
+        <tbody>
+          <tr>
+            <th>Days</th>
+            <th>Time</th>
+            <th>Event</th>
+          </tr>
+          <tr>
+            <td>Daily</td>
+            <td>1pm - 2.30pm </td>
+            <td>Invited Talk + discussion (in <a href="https://cs.brown.edu/~sk/Memos/Conference-Discussion-Format/">this format</a>) + q&a</td>
+          </tr>
+          <tr>
+            <td>Daily</td>
+            <td>2.30pm - </td>
+            <td>Socializing time</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>For each invited talk, there will be material shared prior/afterwards which participants can study (videos, blogs or papers).</p>
+      <p>The socializing times can be used as a time to study together, come up with new ideas or propose paths to explore.</p>
+      <p><strong>Program</strong> All times are displayed in UTC: </p>
+      <table class="fixed_headers">
+        <tbody>
+          <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Speaker(s)</th>
+          </tr>
+          <tr>
+            <td>Monday</td>
+            <td>1pm - 2.30pm </td>
+            <td>Introduction to the networking protocols: the case of TLS</td>
+            <td>Sofía Celi</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>1pm - 2.30pm </td>
+            <td>Integrating post-quantum cryptography into protocols: the case of DNSSEC</td>
+            <td>Roland van Rijswijk-Deij</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>1pm - 2.30pm </td>
+            <td>Integrating post-quantum cryptography into protocols: the case of TLS</td>
+            <td>Douglas Stebila</td>
+          </tr>
+          <tr>
+            <td>Thursday</td>
+            <td>1pm - 2.30pm </td>
+            <td>Integrating post-quantum cryptography into protocols: the case of Wireguard and Signal</td>
+            <td>Thomas Prest and Kai-Chun</td>
+          </tr>
+          <tr>
+            <td>Friday</td>
+            <td>1pm - 2.30pm </td>
+            <td>Challenges of isogenies-based cryptography over networking protocols</td>
+            <td>Sofía Celi and Bas Westerbaan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr>
+  <div class="faq-question">
+    <input id="toggle_2" type="checkbox"></input>
+    <label for="toggle_2">
+      <p id="main-description">(Upcoming) Part 2: Event happening as affiliated event to RWC2022.</p>
+    </label>
+    <div id="expand_2">
+      <p>The event will be entirely virtual.</p>
+			<p><strong>Events</strong></p>
+			<p>19th of April (starting at 4pm CEST):</p>
+      <ul>
+        <li>Presentation: TLS and Post-quantum cryptography by Sofía Celi</li>
+        <li>Panel: Practical considerations for TLS and Post-quantum cryptography, with:</li>
+        <ul>
+				  <li>Adam Langley from Google</li>
+				  <li>Panos Kampanakis from Amazon</li>
+				  <li>Christopher Wood from Cloudflare</li>
+					<li>Benjamin Beurdouche from Firefox/Mozilla</li>
+				</ul>
+			</ul>
+			<p>20th of April (starting at 3pm CEST):</p>
+			<ul>
+        <li>Presentation: DNSSEC and Post-quantum cryptography by Roland M. van Rijswijk-Deij</li>
+        <li>Panel: Practical considerations for DNSSEC and Post-quantum cryptography, with:</li>
+        <ul>
+				  <li>Andrew Fregly from Verisign</li>
+				  <li>Moritz Müller from SIDN Labs</li>
+				  <li>Christian Elmerot from Cloudflare</li>
+				</ul>
+      </ul>
+    </div>
+  </div>
 
   <hr>
   <h2 id="registration">Registration</h2>
