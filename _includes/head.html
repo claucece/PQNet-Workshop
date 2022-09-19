@@ -26,11 +26,13 @@
 
     body {
       font-family: Helvetica;
-      font-size: 18px;
+      font-size: 22px;
       line-height: 1.5;
       font-weight: 300;
       color: black;
-      margin: 150px;
+      margin-left: 150px;
+			margin-right: 150px;
+			background-color: #F9ED24;
     }
 
     @media only screen and (max-width: 600px) {
@@ -46,7 +48,9 @@
     }
 
     .main-box {
+		  background-color: white;
       display: flex;
+			padding: 2rem;
     }
 
     @media only screen and (max-width: 600px) {
@@ -55,11 +59,17 @@
       }
     }
 
+    .second-box {
+		  background-color: white;
+			padding: 2rem;
+      border-top: solid 5px #000000;
+    }
+
     .main-description {
+		  background-color: white;
       display: block;
-      border: solid 5px #faae41;
-      padding: 10px;
-      width: 100%
+      border-top: solid 5px #000000;
+      padding: 2rem;
     }
 
     #main-logo {
